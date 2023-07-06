@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="com.bean">
+	<class name="BookTicket1" table="bticket1">
+		<id name="tid" column="t_id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="Id" column="b_Id" not-null="true" length="20"></property>
+		<property name="ticketid" column="b_ticketid" not-null="true" length="14"/>
+		<property name="travelname" column="b_travelname" not-null="true" length="20"/>
+		<property name="gender" column="b_gender" not-null="true" length="10"/>
+		<property name="Telephone" column="b_telephone" not-null="true" length="20"/>
+		<property name="neednum" column="t_neednum" not-null="true" length="20"/>
+	</class>
+	
+</hibernate-mapping>

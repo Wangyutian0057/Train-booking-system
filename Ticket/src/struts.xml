@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.i18n.encoding" value="gb2312"/>
+<constant name="struts.custom.i18n.resources" value="msg"/>
+<constant name="struts.locale" value="zh_CN"/>
+<package name="Struts" extends="struts-default">
+    <action name="login" class="com.action.UserAction" method="loginAction">
+        <result name="adminLoginSuccess">/asuccess.jsp</result>
+		<result name="userLoginSuccess">/first.jsp</result>
+        <result name="input">/login.jsp</result>
+    </action>
+    <action name="register" class="com.action.UserAction" method="registerAction">
+        <result name="success">/login.jsp</result>
+        <result name="input">/register.jsp</result>
+    </action>
+    
+    
+    <action name="addTicket" class="com.action.TicketAction" method="addTicketAction">
+			<result>/addticket.jsp</result>
+		</action>
+		<action name="deleteTicket" class="com.action.TicketAction" method="deleteTicketAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="updateTicket" class="com.action.TicketAction" method="updateTicketAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="updateTicketForm" class="com.action.TicketAction" method="updateTicketFormAction">
+			<result>/updateticket.jsp</result>
+		</action>
+		<action name="hrefDeleteTicket" class="com.action.TicketAction" method="showFistPageAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="hrefUpdateTicket" class="com.action.TicketAction" method="showFistPageAction">
+			<result>/updateticketinfo.jsp</result>
+		</action>
+		<action name="searchTicketAccuratly" class="com.action.TicketAction" method="sticketAction">
+			<result>/showticket.jsp</result>
+		</action>
+		<action name="searchTicketFuzzily" class="com.action.TicketAction" method="sticket1Action">
+			<result>/showlist.jsp</result>
+		</action>
+		<action name="splitPageShowTicketList" class="com.action.TicketAction" method="splitPageShowTicketListAction">
+			<result>/aright.jsp</result>
+		</action>
+		<action name="showFirstPageList" class="com.action.TicketAction" method="showFistPageAction">
+			<result>/aright.jsp</result>
+		</action>
+		<action name="showBeforePageList" class="com.action.TicketAction" method="showBeforePageAction">
+			<result>/aright.jsp</result>
+		</action>
+		<action name="showNextPageList" class="com.action.TicketAction" method="showNextPageAction">
+			<result>/aright.jsp</result>
+		</action>
+		<action name="showLastPageList" class="com.action.TicketAction" method="showLastPageAction">
+			<result>/aright.jsp</result>
+		</action>
+		<action name="showFirstPageList_delete" class="com.action.TicketAction" method="showFistPageAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="showBeforePageList_delete" class="com.action.TicketAction" method="showBeforePageAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="showNextPageList_delete" class="com.action.TicketAction" method="showNextPageAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="showLastPageList_delete" class="com.action.TicketAction" method="showLastPageAction">
+			<result>/deleteticket.jsp</result>
+		</action>
+		<action name="showFirstPageList_update" class="com.action.TicketAction" method="showFistPageAction">
+			<result>/updateticketinfo.jsp</result>
+		</action>
+		<action name="showBeforePageList_update" class="com.action.TicketAction" method="showBeforePageAction">
+			<result>/updateticketinfo.jsp</result>
+		</action>
+		<action name="showNextPageList_update" class="com.action.TicketAction" method="showNextPageAction">
+			<result>/updateticketinfo.jsp</result>
+		</action>
+		<action name="showLastPageList_update" class="com.action.TicketAction" method="showLastPageAction">
+			<result>/updateticketinfo.jsp</result>
+		</action>
+		
+		<action name="showFirstPageList_buy" class="com.action.TicketAction" method="showFistPageAction">
+			<result>/userLoginSuccess.jsp</result>
+		</action>
+		<action name="showBeforePageList_buy" class="com.action.TicketAction" method="showBeforePageAction">
+			<result>/userLoginSuccess.jsp</result>
+		</action>
+		<action name="showNextPageList_buy" class="com.action.TicketAction" method="showNextPageAction">
+			<result>/userLoginSuccess.jsp</result>
+		</action>
+		<action name="showLastPageList_buy" class="com.action.TicketAction" method="showLastPageAction">
+			<result>/userLoginSuccess.jsp</result>
+		</action>
+		
+		<action name="buy" class="com.action.TicketAction" method="buyAction">
+			<result>/showSelectedticket.jsp</result>
+		</action>
+		
+		<action name="book" class="com.action.BookTicketAction" method="bookAction">
+			<result name="success">/booksuccess.jsp</result>
+			<result name="input">/bookticket.jsp</result>
+		</action>
+		
+		<action name="select" class="com.action.SelectAction" method="selectAction">
+		<result>/selectDao.jsp</result>
+		</action>
+		
+		
+		<action name="MessageAction" class="com.action.MessageAction" method="update1Action">
+			<result type="redirect">list.jsp</result>
+			<result name="fail">/fail.jsp</result>
+			<result name="update">/update.jsp</result>
+		</action>
+		<action name="list" class="com.action.MessageAction" method="queryAll">
+			<result>/list.jsp</result>
+		</action>
+</package>
+</struts>

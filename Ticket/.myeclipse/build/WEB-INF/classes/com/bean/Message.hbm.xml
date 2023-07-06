@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="com.bean">
+	<class name="Message" table="message">
+		<id name="id" column="id" type="integer">
+		<generator class="native"></generator>
+		</id>
+		<property name="username" column="username" not-null="true" length="20"/>
+		<property name="title" column="title" not-null="true" length="50"/>
+		<property name="content" column="content" not-null="true" length="200"/>
+		<property name="date" column="date" not-null="true" length="100"/>
+	</class>
+	
+</hibernate-mapping>

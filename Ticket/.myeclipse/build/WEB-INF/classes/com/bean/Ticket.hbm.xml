@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping 	package="com.bean">
+	<class name="Ticket" table="ticket">
+		<id name="id" column="t_id" type="integer">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="start" column="t_start" not-null="true" length="20"/>
+		<property name="end" column="t_end" not-null="true" length="20"/>
+		<property name="price" column="t_price" not-null="true" type="double"/>
+		<property name="model" column="t_model" not-null="true" length="20"/>
+		<property name="ticketFactory" column="t_ticketFactory" not-null="true" length="20"/>
+		<property name="ticketnum" column="t_ticketnum" not-null="true" length="10"/>
+		<property name="flytime" column="flytime" not-null="true" length="20"/>
+	</class>
+	
+</hibernate-mapping>
